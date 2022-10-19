@@ -1,14 +1,42 @@
 .App {
   text-align: center;
 }
+
 table {
   width: 90%;
   margin: 2em auto;
 }
 
-thead{
+thead {
   border-bottom: 2px solid black;
 }
-th{
+
+th {
   border-bottom: 2px solid black;
+}
+
+form {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: left;
+}
+
+form label {
+  display: block;
+}
+
+form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+}
+
+form button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 18px;
 }

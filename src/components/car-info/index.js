@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { carData } from './car-data'
 
 function CarInfo() {
