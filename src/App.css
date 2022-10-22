@@ -2,26 +2,28 @@
   text-align: center;
 }
 
-.show-button{
+.show-button {
   position: absolute;
   top: 50%;
   left: 5%;
 }
 
-.filter{
+.filter {
   width: 90%;
   margin: auto;
   display: flex;
   justify-content: flex-end;
 }
-.filter input{
+
+.filter input {
   display: block;
   box-sizing: border-box;
   width: 200px;
   padding: 0.5em;
   margin: 1em 0 0 0;
 }
-.filter select{
+
+.filter select {
   display: block;
   box-sizing: border-box;
   width: 100px;
@@ -29,7 +31,8 @@
   margin: 1em 0 0 0;
   border-right: 0px;
 }
-.actions{
+
+.actions {
   position: relative;
 }
 
@@ -44,6 +47,22 @@ thead {
 
 th {
   border-bottom: 2px solid black;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  width: 70px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
 }
 
 form {
@@ -70,4 +89,52 @@ form button {
   width: 100%;
   padding: 10px 0;
   margin-top: 18px;
+}
+
+.landing-info h1 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.landing-info p {
+  font-size: 1.5rem;
+}
+
+.landing-info h4 {
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.sidebar {
+  width: 230px;
+  height: 90vh;
+  border-right: 3px solid black;
+  text-align: left;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.content {
+  display: flex
+}
+
+.content aside {
+  width: fit-content;
+}
+
+.content main {
+  width: 100%;
 }

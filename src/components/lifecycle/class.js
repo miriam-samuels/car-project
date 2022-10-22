@@ -2,40 +2,36 @@ import React, { Component } from 'react'
 
 export class ClassLifecycle extends Component {
    constructor(props) {
-      super(props)
-
-      this.state = {
-         time: new Date()
-      }
-      console.log("constructor")
+     super(props)
+      console.log("constructor");
+     this.state = {
+        time : new Date()
+     }
    }
 
-   componentDidMount() {
-      console.log("componentDidMount")
+   componentDidMount(){
       this.timer = setInterval(() => {
          this.setState({
-            time: new Date()
+            time : new Date()
          })
-      }, 1000);
+      }, 1000)
    }
 
-   componentDidUpdate() {
-      console.log("componentDidUpdate")
+   componentDidUpdate(){
+      console.log("time is running");
    }
 
-   componentWillUnmount() {
-      console.log("componentWillUnmount")
+   componentWillUnmount(){
       clearInterval(this.timer)
    }
-   render() {
-      console.log("render")
 
-      return (
-         <div>
-            <h4>{this.state.time.toLocaleTimeString()}</h4>
-         </div>
-      )
-   }
+  render() {
+    return (
+      <div>
+         <h1>{this.state.time.toLocaleTimeString()}</h1>
+      </div>
+    )
+  }
 }
 
 export default ClassLifecycle

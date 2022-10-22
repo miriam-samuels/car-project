@@ -1,30 +1,31 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 function FuncLifecycle() {
 
    const [time, setTime] = useState(new Date())
-   const [clicked, setClicked] = useState(0)
+   const [count, setCount] = useState(0)
 
    useEffect(() => {
       const timer = setInterval(() => {
          setTime(new Date())
-      }, 1000);
+      }, 1000)
 
       return () => {
          clearInterval(timer)
       }
-   },[])
+   }, [])
 
    useEffect(() => {
-      console.log(clicked)
-   },[clicked])
-   
+      console.log("hey, this component updated")
+   },[count])
+
 
 
    return (
       <div>
-         <h4> {time.toLocaleTimeString()}</h4>
-         <button onClick={() => setClicked(prev => prev + 1)}>Click ME</button>
+         <h1>{time.toLocaleTimeString()}</h1>
+         <p>{count}</p>
+         <button onClick={() => setCount(current => current + 1)}>Click Me</button>
       </div>
    )
 }
